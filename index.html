@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>WordPress ZoomSounds DZS Preview Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+        <link href="./bootstrap/bootstrap.css" rel="stylesheet">
+        <link rel='stylesheet' type="text/css" href="style/style.css"/>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <link rel='stylesheet' type="text/css" href="dzstooltip/dzstooltip.css"/>
+        <link rel='stylesheet' type="text/css" href="audioplayer/audioplayer.css"/>
+        <script src="audioplayer/audioplayer.js" type="text/javascript"></script>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="mwrap-wrapper">
+            <style class="preview-css">
+                .audioplayer.skin-wave .meta-artist .the-artist {
+                    /*color: #97DB43;*/
+                }
+
+                .audioplayer.skin-wave {
+                    font-family: "PT Sans", arial, serif;
+                }
+
+                /*.audioplayer.skin-wave .meta-artist .the-name > a{ color: #fff;text-transform: uppercase; font-weight: bold;*/
+                /*display: block;}  .audioplayer.skin-wave .meta-artist .the-name{ margin-top: 0;color: #fff; font-size: 11px; text-transform: uppercase; font-weight: bold;*/
+                /*display: block;} .audioplayer.skin-wave .btn-embed-code > svg{ margin-left: -1px; margin-top: -1px; }*/
+            </style>
+            <div class="preseter" style="position:absolute;">
+                <div class="the-icon"></div>
+                <div class="the-content">
+                    <h3>Quick Config</h3>
+                    <div class="setting">
+                        <div class="alabel">Highlight Color</div>
+                        <input id="preview-buttons-colors-field" type="text" value="#db4343" class=" with-colorpicker" data-label="buttons_color" style="display: inline-block; width: 70px; "/>
+                        <div class="picker-con" style="margin-left: 10px;">
+                            <div class="the-icon"></div>
+                            <div class="picker"></div>
+                        </div>
+                    </div>
+                    <div class="setting">
+                        <div class="alabel">Mode</div>
+                        <div class="option-selecter-con option-selecter-skinwave-mode">
+                            <div class="option-selecter-object active" data-label="skinwave-mode" data-value="normal">Normal</div>
+                            <div class="option-selecter-object" data-label="skinwave-mode" data-value="small">Slick</div>
+                        </div>
+                    </div>
+                    <div class="setting">
+                        <div class="alabel">Wave Mode</div>
+                        <div class="option-selecter-con option-selecter-skinwave-wave-mode">
+                            <div class="option-selecter-object active" data-label="skinwave_wave_mode" data-value="canvas">Dynamic</div>
+                            <div class="option-selecter-object" data-label="skinwave_wave_mode" data-value="image">Image</div>
+                        </div>
+                    </div>
+                    <div class="setting">
+                        <div class="alabel">Waves Number</div>
+                        <div class="option-selecter-con option-selecter-skinwave-number">
+                            <div class="option-selecter-object active" data-label="skinwave-number" data-value="250">250</div>
+                            <div class="option-selecter-object" data-label="skinwave-number" data-value="150">150</div>
+                            <div class="option-selecter-object" data-label="skinwave-number" data-value="50">50</div>
+                            <div class="option-selecter-object" data-label="skinwave-number" data-value="900">900</div>
+                        </div>
+                    </div>
+                    <div class="setting">
+                        <div class="alabel">Reflection Size</div>
+                        <div class="option-selecter-con option-selecter-skinwave-number">
+                            <div class="option-selecter-object active" data-label="reflection_size" data-value="0.25">Normal</div>
+                            <div class="option-selecter-object" data-label="reflection_size" data-value="0.5">Big</div>
+                            <div class="option-selecter-object" data-label="reflection_size" data-value="0">None</div>
+                        </div>
+                    </div>
+                    <div class="setting">
+                        <div class="alabel">
+                            <input type="checkbox" class="textinput mainsetting preseter-field" name="disable_volume" value="#202024"/>Disable Volume
+                        </div>
+                        <div class="alabel">
+                            <input type="checkbox" class="textinput mainsetting preseter-field" name="disable_scrub" value="#202024"/>Disable Scrubbar
+                        </div>
+                        <div class="alabel">
+                            <input type="checkbox" class="textinput mainsetting preseter-field" name="disable_views" value="#202024"/>Disable Views
+                        </div>
+                    </div>
+                </div>
+                <!--end the-content-->
+            </div>
+            <section class="mcon-mainmenu" style="z-index: 5;">
+                <!--
+        -->
+                <div class="container">
+                    <div class="row" style="margin-left:0; margin-right: 0;">
+                        <a class="logo-con " href="index.html">
+                            <div class="logo-image" style="background-image: url(img/dzsplugins.png); "></div>
+                        </a>
+                        <div class="main-menu-con">
+                            <div class="responsive-selector">
+                                <div class="responsive-selector--bg"></div>
+                                <div class="bar--middle"></div>
+                            </div>
+                            <ul class="main-menu">
+                                <li class=" active">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class=" ">
+                                    <a href="index-skins.html">All Skins</a>
+                                </li>
+                                <li class=" ">
+                                    <a href="#">Demos</a>
+                                    <div class="submenu">
+                                        <div class="row show-on-responsive">
+                                            <a class="col-md-4 show-on-responsive" href="index-minion.html">
+                                                <h6 class="show-on-responsive">Minion Skin</h6>
+                                                <div class="feature-image load-on-window-load" data-src="img/e2.jpg" style=";"></div>
+                                            </a>
+                                            <a class="col-md-4 show-on-responsive" href="index-skins.html">
+                                                <h6 class="show-on-responsive">All Skins</h6>
+                                                <div class="feature-image load-on-window-load" data-src="img/e3.jpg" style=";"></div>
+                                            </a>
+                                            <a class="col-md-4 show-on-responsive" href="index-consecutive.html">
+                                                <h6 class="show-on-responsive">Consecutive</h6>
+                                                <div class="feature-image load-on-window-load" data-src="img/econsecutive.jpg" style=";"></div>
+                                            </a>
+                                        </div>
+                                        <div class="row show-on-responsive">
+                                            <a class="col-md-4 show-on-responsive" href="index-zoombox.html">
+                                                <h6 class="show-on-responsive">In Lightbox</h6>
+                                                <div class="feature-image load-on-window-load" data-src="img/e7.jpg" style=";"></div>
+                                            </a>
+                                            <a class="col-md-4 show-on-responsive" href="index-justthumb.html" target="">
+                                                <h6 class="show-on-responsive">JustThumb Skin</h6>
+                                                <div class="feature-image load-on-window-load" data-src="img/e9.jpg" style=";"></div>
+                                            </a>
+                                            <a class="col-md-4 show-on-responsive" href="index-skinpro.html">
+                                                <h6 class="show-on-responsive">Skin Pro</h6>
+                                                <div class="feature-image load-on-window-load" data-src="img/e11.jpg" style=";"></div>
+                                            </a>
+                                        </div>
+                                        <div class="row show-on-responsive">
+                                            <a class="col-md-4 show-on-responsive" href="index-skinaria.html">
+                                                <h6 class="show-on-responsive">Skin Aria</h6>
+                                                <div class="feature-image load-on-window-load" data-src="img/e13.jpg" style=";"></div>
+                                            </a>
+                                            <a class="col-md-4 show-on-responsive" href="index-skins.html#skin-silver">
+                                                <h6 class="show-on-responsive">Skin Silver</h6>
+                                                <div class="feature-image load-on-window-load" data-src="img/eskinsilver.jpg" style=";"></div>
+                                            </a>
+                                            <a class="col-md-4 show-on-responsive" href="index-skins.html#skin-minimal">
+                                                <h6 class="show-on-responsive">Skin Minimal</h6>
+                                                <div class="feature-image load-on-window-load" style="background-position: center right;" data-src="img/eskinminimal.jpg" style=";"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class=" dzs-button style-border-outside padding-small " style="border-color: rgba(140, 139, 71, 0.3); ">
+                                    <span class="the-bg"></span>
+                                    <a href="http://digitalzoomstudio.net/links/dzsap.php" class="the-text" style="color: #fff; font-size:11px; " target="_blank">Get now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--===end mainmenu
+    -->
+            <style>
+                .extra-html {
+                    color: #dddddd;
+                }
+            </style>
+            <style id="preview-buttons-colors"></style>
+            <section class="mcon-maindemo  dzsparallaxer  height-is-based-on-content  use-loading  " style="position: relative; padding-top:80px; background-color: #EEEEEE">
+                <div class="divimage dzsparallaxer--target " data-src="img/imgbig1.jpg" style="width: 100%; height: 140%; display: none;"></div>
+                <div class="semi-black-overlay" style="display: none"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="the-bg" style=""></div>
+                            <div class="overlay-comments" title="comment clicking on bottom scrubbar"></div>
+                            <div id="ap1" class="audioplayer-tobe alternate-layout is-preview button-aspect-noir button-aspect-noir--filled" style="width:100%; margin-top:40px; margin-bottom: 40px;" data-thumb="img/thumb10.jpg" data-thumb_link="img/thumb.jpg" data-bgimage="img/bg.jpg" data-scrubbg="waves/scrubbg.png" data-scrubprog="waves/scrubprog.png" data-type="normal" data-source="sounds/itsabeautifulday.mp3" data-sourceogg="sounds/itsabeautifulday.ogg">
+                                <!--  data-sourceogg="sounds/adg3.ogg"  -->
+                                <div class="the-comments">
+                                    <span class="dzstooltip-con a-comment with-tooltip" style="left:7.947368421052632%">
+                                        <div class="aux-padder"></div>
+                                        <span class="dzstooltip skin-black arrow-from-start arrow-bottom" style="width: 250px;">
+                                            <span class="the-comment-author">@zoomitflash</span>
+                                            says:<br>here starts my favorite song
+                                        </span>
+                                        <div class="the-avatar" style="background-image: url(https://secure.gravatar.com/avatar/31750403b9b774a295fb43f738c6ff9c?s=20)"></div>
+                                    </span>
+                                    <span class="dzstooltip-con a-comment with-tooltip" style="left:17.947368421052632%">
+                                        <div class="aux-padder"></div>
+                                        <span class="dzstooltip skin-black arrow-from-start arrow-bottom" style="width: 250px;">
+                                            <span class="the-comment-author">@rebeccawhite</span>
+                                            says:<br>
+                                            wow really love this part <3 </span><div class="the-avatar" style="background-image: url(img/avatar3.jpeg)"></div>
+                                        </span>
+                                        <span class="dzstooltip-con a-comment with-tooltip" style="left:77%">
+                                            <div class="aux-padder"></div>
+                                            <span class="dzstooltip skin-black arrow-from-start arrow-bottom" style="width: 250px;">
+                                                <span class="the-comment-author">@bluevelvet</span>
+                                                says:<br>time to repeat
+                                            </span>
+                                            <div class="the-avatar" style="background-image: url(img/avatar7.jpeg)"></div>
+                                        </span>
+                                </div>
+                                <div class="meta-artist">
+                                    <span class="the-artist">
+                                        <strong>Tim McMorris</strong>
+                                    </span>
+                                    <span class="the-name">
+                                        <a href="http://codecanyon.net/item/zoomsounds-wordpress-audio-player/6181433?ref=ZoomIt" target="_blank">It's a beautiful day</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mcon-otherdemos ">
+                <div class="container container-layouts">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Layouts.</h2>
+                            <div class="separator-short m20">
+                                <figure class="the-graphic"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class="example-button example-layout " href="index.html?skinwave_layout_demo=demo1" data-label="skinwave_layout_demo" data-value="demo1" target="">
+                                <img class="needs-loading " data-src="img/l1.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Default Bar Waveform</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button example-layout' href="index.html?skinwave_layout_demo=demo2" data-label="skinwave_layout_demo" data-value="demo2" target="">
+                                <img class="" data-src="img/l2.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Live Spectrum, Gradient, Controls Below</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button example-layout' href="index.html?skinwave_layout_demo=demo3" data-label="skinwave_layout_demo" data-value="demo3" target="">
+                                <img class="" data-src="img/l3.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Slick Layout, Light Theme, Slimmer Waves</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class="example-button example-layout " href="index.html?skinwave_layout_demo=demo4" data-label="skinwave_layout_demo" data-value="demo4" target="">
+                                <img class="needs-loading " data-src="img/l4.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Waveform Style Reflecto</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button example-layout' href="index.html?skinwave_layout_demo=demo5" data-label="skinwave_layout_demo" data-value="demo5" target="">
+                                <img class="" data-src="img/l5.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Boxed Inside, Background Player</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button example-layout' href="index.html?skinwave_layout_demo=demo6" data-label="skinwave_layout_demo" data-value="demo6" target="">
+                                <img class="" data-src="img/l6.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Wave Waveform, Dark Theme</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>
+                                <em>* These are just some example layouts which can be achieved with zoomsounds. The background has been changed to show that it fits in any theme background color. The button skin is also different every time so you can choose that too. Browse below for some more demos and customizations - including playlist support, completely different skins, live spectrum analyzer and more.</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mcon-otherdemos">
+                <!--
+        <div class="pat-bg">
+            <div class="pat-bg-inner">
+
+            </div>
+        </div>
+        -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Examples.</h2>
+                            <div class="separator-short m20">
+                                <figure class="the-graphic"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class="example-button active" href="index.html" target="">
+                                <img class="needs-loading " data-src="img/e1.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Audio Player with Comments</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button' href="index-minion.html" target="">
+                                <img class="" data-src="img/e2.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Minimal Approach</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button' href="index-skins.html" target="">
+                                <img class="" data-src="img/e3.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Different Configurations</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class='example-button' target="_blank" href="http://zoomthe.me/themeadmin-dzsap/?page_id=4" target="">
+                                <img class="" data-src="img/e4.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">See it in the Default WordPress Theme</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button ' href="index-gallery.html" target="">
+                                <img class="" data-src="img/e5.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">With a Playlist</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class='example-button ' target="" href="index-zoombox.html" target="">
+                                <img class="" data-src="img/e7.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Can be launched in a ZoomBox</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button ' target="" href="index-justthumb.html" target="">
+                                <img class="" data-src="img/e9.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Just Thumbnail Players</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class='example-button ' target="" href="index-skinpro.html" target="">
+                                <img class="" data-src="img/e11.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Skin Pro</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button ' target="" href="index-skinaria.html" target="">
+                                <img class="" data-src="img/e13.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Skin Aria</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button ' href="index-gallery-skindefault.html" target="">
+                                <img class="" data-src="img/e12.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">With a Playlist / Skin Default</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class='example-button' href="index-sticktobottom.html" target="">
+                                <img class="" data-src="img/e10.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Footer Player Wave / WooCommerce </h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button ' target="" href="index-sticktobottom_2.html" target="">
+                                <img class="" data-src="img/e14.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Footer Player Silver / Gallery Grid</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class='example-button ' target="" href="index-sticktobottom_3.html" target="">
+                                <img class="" data-src="img/e16.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Footer Player Silver / Buy List</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class='example-button' href="https://goo.gl/NDuc3E" target="_blank">
+                                <img class="" data-src="img/e17.jpg" style="width:100%;"/>
+                                <h3 class="example-heading">Preview on Hover / WooCommerce Grid</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mcon-otherdemos">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 style="font-size: 1.2rem;">Realtime Spectrum Analyzer vs. Predefined Waveform</h2>
+                            <div class="separator-short m20">
+                                <figure class="the-graphic"></figure>
+                            </div>
+                            <p>Features neverseen before on a stock audio player! You can amaze your viewers with realtime cutting-edge realtime spectrum analyzer. Or use a selfmade waveform. The waveform is self generated for every song, but do not worry, we provide tools to create the waveform in just two clicks!</p>
+                            <p>
+                                <em>only for skin-wave</em>
+                            </p>
+                            <br>
+                            <br/>
+                        </div>
+                        <div class="col-md-6 border-box" style="padding: 0px 60px 20px; ">
+                            <img class="fullwidth feat-image" data-src="img/feat1.png"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mcon-otherdemos">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 border-box" style="padding: 0px 60px 20px; ">
+                            <img class="fullwidth " data-src="img/feat3.png"/>
+                        </div>
+                        <div class="col-md-6">
+                            <h2>Multiple Skins</h2>
+                            <div class="separator-short m20">
+                                <figure class="the-graphic"></figure>
+                            </div>
+                            <p>Four skins to fit every need. You can set the color of the waves from the admin to fit your branding.</p>
+                            <br>
+                            <p>
+                                <a href="index-skins.html" class="dzs-button skin-emerald">Check out skins!</a>
+                            </p>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mcon-otherdemos" style="padding-bottom: 0;">
+                <div class="container">
+                    <div class="row" style="margin-bottom: 0;">
+                        <div class="col-md-6">
+                            <h2>Responsive</h2>
+                            <div class="separator-short m20">
+                                <figure class="the-graphic"></figure>
+                            </div>
+                            <p>Mobile ready! Retina ready! Tested on iOS and Android 4.0+. Responsive from mobile to HD due to CSS 3 Media Queries. Retina ready due to use of font icons and no images. Scales to any dimension!</p>
+                        </div>
+                        <div class="col-md-6 border-box" style="padding: 0px 60px 0px; ">
+                            <img class="fullwidth " data-src="img/feat2.png"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mcon-features">
+                <div class="pat-bg">
+                    <div class="pat-bg-inner"></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="bigfeature">
+                                <i class="icon-thumbs-up"></i>
+                            </div>
+                            <h4>Easy Install</h4>
+                            <p style="text-align: center">
+                                Install WordPress ZoomSounds in just a couple of minutes. <a href="http://digitalzoomstudio.net/docs/wpzoomsounds/" target="_blank">Docs</a>
+                                are also there.
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="bigfeature">
+                                <i class="icon-desktop"></i>
+                            </div>
+                            <h4>Responsive</h4>
+                            <p style="text-align: center">From mobile to HD, ZoomSounds are ultra responsive. Also has retina graphics.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="bigfeature">
+                                <i class="icon-pencil"></i>
+                            </div>
+                            <h4>Customizable</h4>
+                            <p style="text-align: center">Customize ZoomSounds with the many options included.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="bigfeature">
+                                <i class="icon-briefcase"></i>
+                            </div>
+                            <h4>SEO Friendly</h4>
+                            <p style="text-align: center">Built with SEO in mind, ZoomSounds parses html content into working magic.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mcon-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            &copy;copyright <a href="http://bit.ly/nM4R6u">ZoomIt</a>
+                            2013
+
+                
+                        </div>
+                        <div class="col-md-6" style="text-align: right">
+                            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdigitalzoomstudio&amp;width=150&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;send=false&amp;appId=569360426428348" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>
+
+            jQuery(document).ready(function($) {
+                //return;
+
+                var lab = '';
+
+                var val = 0;
+                var use_spectrum = 'off';
+
+                var design_color_bg = '444444';
+                var comments_enable = 'off';
+                var design_color_prog = 'fa21da,fa213f';
+
+                var skinwave_wave_mode_canvas_mode = 'normal';
+                var disable_volume = 'off';
+
+                var bar_len = 3;
+                var bar_space = 1;
+                var reflection_size = 0.25;
+
+                var init_parallaxer = false;
+
+                //console.info(window);
+                //console.info(get_query_arg(window.location.href, 'spectrum'));
+                lab = 'spectrum';
+                if (get_query_arg(window.location.href, lab) == 'on') {
+                    use_spectrum = 'on';
+                    //console.info('ceva');
+                    $('a[title="waveform"]').removeClass('active');
+                    $('a[title="with dynamic spectrum"]').addClass('active');
+                }
+
+                lab = 'skinwave_layout_demo';
+                val = 'demo1';
+                if (get_query_arg(window.location.href, lab)) {
+
+                    val = (get_query_arg(window.location.href, lab));
+
+                    $('*[data-label*="' + lab + '"]').each(function() {
+                        var _t = $(this);
+                        //                console.info(_t, _t.attr('data-value'));
+
+                        //                console.info(_t.attr('data-value'));
+                        console.info(val, _t.attr('data-value'));
+                        if (_t.attr('data-value') == val) {
+                            _t.parent().parent().find('.active').removeClass('active');
+                            _t.addClass('active');
+                        }
+                    })
+                }
+
+                //        val = 'demo1';
+                var val_demo = val;
+
+                var _c = $('#ap1');
+                if (val == 'demo1') {
+
+                    comments_enable = 'on';
+
+                    //            console.info($('.preview-css'));
+                    $('.preview-css').append('body .extra-html { color: #444444; opacity:0.5; } .audioplayer.skin-wave{ margin-bottom: 25px!important; } .mcon-maindemo { background-color: #fff!important; }')
+                    $('.overlay-comments').css('top', '10px')
+
+                }
+
+                if (val == 'demo2') {
+
+                    //            console.info($('.preview-css'));
+
+                    design_color_bg = '777777,999999';
+                    design_color_prog = '#962c3e,ea8c52';
+                    bar_space = 1;
+                    bar_len = 200;
+
+                    use_spectrum = 'on';
+                    init_parallaxer = true;
+
+                    $('.mcon-maindemo .divimage').eq(0).attr('data-src', 'img/bg_demo_2.jpg')
+                    $('#preview-buttons-colors-field').parent().hide();
+
+                    setTimeout(function() {
+
+                        console.info('$(\'.btn-itunes\') - ', $('.btn-itunes'));
+                        $('.btn-itunes').hide();
+                    }, 1000);
+                    $('#preview-buttons-colors-field').val(design_color_prog);
+                    setTimeout(function() {
+
+                        $('#preview-buttons-colors-field').trigger('change');
+                    }, 100)
+
+                    _c.attr('data-thumb', 'img/thumb_demo2.jpg');
+
+                    _c.removeClass('alternate-layout ');
+                    _c.removeClass('button-aspect-noir');
+                    _c.addClass('theme-light');
+                    $('.preview-css').append('body .extra-html { color: #444444; opacity:0.5; } .audioplayer.skin-wave{ margin-bottom: 55px!important; }  .extra-html { margin-top: 20px; }  .extra-html .float-left{ padding-left: 150px; }')
+                    $('.preview-css').append('.audioplayer.skin-wave .ap-controls .con-playpause .playbtn, .audioplayer.skin-wave .ap-controls .con-playpause .pausebtn{ background-color: #962c3e!important; }')
+                    $('.preview-css').append('.audioplayer.skin-wave .meta-artist .the-name > a{ color: #ddd; }')
+                    $('.overlay-comments').css('top', '30px')
+                }
+
+                var val_skinwave_mode = 'default';
+                if (val == 'demo3') {
+
+                    design_color_bg = 'dddddd';
+                    design_color_prog = '#4e7596';
+                    val_skinwave_mode = 'small';
+                    bar_space = 2;
+
+                    init_parallaxer = true;
+
+                    $('#preview-buttons-colors-field').parent().hide();
+                    $('#preview-buttons-colors-field').val(design_color_prog);
+                    setTimeout(function() {
+
+                        $('#preview-buttons-colors-field').trigger('change');
+                    }, 100)
+
+                    //            console.info($('.preview-css'));
+
+                    _c.attr('data-thumb', 'img/thumb_demo3.jpg');
+                    _c.addClass('button-aspect-noir theme-light');
+                    _c.removeClass('button-aspect-noir--filled');
+                    $('.preview-css').append('body .extra-html { color: #444444; opacity:0.5; } .audioplayer.skin-wave{ margin-bottom: 55px!important; } .mcon-maindemo { background-color: #444!important; } .extra-html { margin-top: 20px; }  .extra-html .float-left{ }')
+                    $('.overlay-comments').css('top', '30px')
+                }
+                if (val == 'demo4') {
+
+                    design_color_bg = '999999,ffffff';
+                    design_color_prog = 'ff657a,ffffff';
+                    val_skinwave_mode = 'nocontrols';
+                    skinwave_wave_mode_canvas_mode = 'reflecto';
+                    disable_volume = 'on';
+                    //            use_spectrum = 'on';
+                    //            reflection_size = '0.5';
+
+                    //            console.info($('.preview-css'));
+                    setTimeout(function() {
+
+                        $('.extra-html').hide();
+                        $('.overlay-comments').hide();
+                    }, 100)
+
+                    $('#preview-buttons-colors-field').parent().hide();
+                    $('#preview-buttons-colors-field').val(design_color_prog);
+                    setTimeout(function() {
+
+                        $('#preview-buttons-colors-field').trigger('change');
+                    }, 100)
+
+                    _c.attr('data-thumb', '');
+                    _c.find('.meta-artist').eq(0).html('');
+                    _c.addClass('button-aspect-noir theme-light');
+                    _c.removeClass('button-aspect-noir--filled');
+                    $('.preview-css').append('body .extra-html { color: #444444; opacity:0.5; } .audioplayer.skin-wave{ margin-bottom: 55px!important; } .mcon-maindemo { background-color: #444!important; } .extra-html { margin-top: 20px; }  .extra-html .float-left{ }')
+                    $('.overlay-comments').css('top', '30px')
+                }
+                if (val == 'demo5') {
+
+                    design_color_bg = '999999,ffffff';
+                    design_color_prog = 'd2ff52';
+                    val_skinwave_mode = 'small';
+                    reflection_size = 0;
+                    disable_volume = 'on';
+
+                    init_parallaxer = true;
+
+                    //            console.info($('.preview-css'));
+                    setTimeout(function() {
+
+                        $('.extra-html').hide();
+                        $('.overlay-comments').hide();
+                    }, 100)
+
+                    $('#preview-buttons-colors-field').parent().hide();
+                    $('#preview-buttons-colors-field').val(design_color_prog);
+                    setTimeout(function() {
+
+                        $('#preview-buttons-colors-field').trigger('change');
+                    }, 100)
+                    $('.mcon-maindemo .divimage').eq(0).attr('data-src', 'img/grid2.jpg').css('filter', 'blur(15px)');
+
+                    _c.attr('data-thumb', '');
+                    _c.attr('data-wrapper-image', 'img/grid2.jpg');
+                    _c.prepend('<a href="#" class=" dzsap-wrapper-but "><span class="the-icon">{{svg_share_icon}}</span> </a>  <a href="#" class=" dzsap-wrapper-but btn-like"><span class="the-icon">{{heart_svg}}</span> </a>');
+                    //            _c.find('.meta-artist').eq(0).html('');
+                    $('.preseter').hide();
+                    _c.addClass('button-aspect-noir theme-light zoomsounds-wrapper-bg-bellow disable-volume');
+                    _c.removeClass('button-aspect-noir--filled');
+                    $('.preview-css').append('body .extra-html { color: #444444; opacity:0.5; } .audioplayer.skin-wave{ margin-bottom: 55px!important; } .mcon-maindemo { background-color: #444!important; } .extra-html { margin-top: 20px; }  .extra-html .float-left{ }')
+                    $('.overlay-comments').css('top', '30px')
+                }
+                if (val == 'demo6') {
+
+                    design_color_bg = '444444';
+                    design_color_prog = 'E5624B,E0924A';
+                    val_skinwave_mode = 'alternate';
+                    reflection_size = 0.25;
+                    bar_space = 0;
+                    bar_len = 1;
+                    disable_volume = 'on';
+
+                    init_parallaxer = true;
+
+                    //            console.info($('.preview-css'));
+                    setTimeout(function() {
+
+                        $('.overlay-comments').hide();
+                    }, 100)
+
+                    $('#preview-buttons-colors-field').parent().hide();
+                    $('#preview-buttons-colors-field').val(design_color_prog);
+                    setTimeout(function() {
+
+                        $('#preview-buttons-colors-field').trigger('change');
+                    }, 100)
+                    $('.mcon-maindemo .divimage').eq(0).attr('data-src', 'img/bg_demo6.jpg');
+
+                    _c.attr('data-thumb', '');
+                    //            _c.find('.meta-artist').eq(0).html('');
+                    $('.preseter').hide();
+                    _c.addClass('button-aspect-noir  ');
+                    _c.removeClass('button-aspect-noir--filled');
+                    $('.preview-css').append('body .extra-html { color: #444444; opacity:0.5; } .audioplayer.skin-wave{ margin-bottom: 55px!important; } .mcon-maindemo { background-color: #444!important; } .extra-html { margin-top: 20px; } body  .audioplayer.skin-wave.skin-wave-mode-alternate .ap-controls .con-controls{ margin-bottom: 5px; }       .extra-html .float-left{ }')
+                    $('.overlay-comments').css('top', '30px')
+                }
+
+                var str_rate = '<div class="float-left "> <span class=" btn-zoomsounds btn-like"><span class="the-icon">{{heart_svg}}</span><span class="the-label hide-on-active">Like</span><span class="the-label show-on-active">Liked</span></span>                 <span class=" btn-zoomsounds dzstooltip-con "> <span class="dzstooltip transition-slidein arrow-bottom align-left skin-black " style="width: 350px; "><span style="max-height: 150px; overflow:hidden; display: block; white-space: normal; font-weight: normal">{{embed_code}}</span></span> <span class="the-icon"><i class="fa fa-share"></i></span><span class="the-label ">Embed</span></span>                 <span class=" btn-zoomsounds btn-itunes "><span class="the-icon"><i class="fa fa-apple"></i></span><span class="the-label ">iTunes</span></span> </div>            ';
+                var str_rate2 = '<div class="counter-likes"><i class="fa fa-heart"></i><span class="the-number">512</span></div>';
+                var str_views = '<div class="counter-hits"><i class="fa fa-play"></i><span class="the-number">10231</span></div>';
+
+                if (get_query_arg(window.location.href, 'rating') == 'rates') {
+                    str_rate = '<div class="star-rating-con"><div class="star-rating-bg"></div><div class="star-rating-set-clip" style="width: 96.6px;"><div class="star-rating-prog"></div></div><div class="star-rating-prog-clip"><div class="star-rating-prog"></div></div></div>';
+                    //console.info('ceva');
+                    $('a[title="rating likes"]').removeClass('active');
+                    $('a[title="rating stars"]').addClass('active');
+
+                    str_rate2 = '<div class="counter-rates"><span class="the-number">154</span> rates</div>';
+
+                    $('.option-selecter-object[data-label*="rating-"]').each(function() {
+                        var _t = $(this);
+                        //                console.info(_t, _t.attr('data-value'));
+                        if (_t.attr('data-value') == 'rates') {
+                            _t.parent().children().removeClass('active');
+                            _t.addClass('active');
+                        }
+                    })
+                }
+
+                //        console.info(get_query_arg(window.location.href, 'rating'))
+                if (get_query_arg(window.location.href, 'rating') == 'off') {
+                    str_rate = '';
+                    str_rate2 = '';
+
+                    $('.option-selecter-object[data-label*="rating-"]').each(function() {
+                        var _t = $(this);
+                        //                console.info(_t, _t.attr('data-value'));
+                        if (_t.attr('data-value') == 'off') {
+                            _t.parent().children().removeClass('active');
+                            _t.addClass('active');
+                        }
+                    })
+                }
+
+                if (get_query_arg(window.location.href, 'disable_views') == 'on') {
+                    str_views = '';
+                    $('input[name="disable_views"]').prop('checked', true);
+                }
+
+                var disable_scrub = 'default';
+
+                if (get_query_arg(window.location.href, 'disable_scrub') == 'on') {
+                    disable_scrub = 'on';
+                    $('input[name="disable_scrub"]').prop('checked', true);
+                }
+
+                //        console.info(get_query_arg(window.location.href, 'disable_volume'))
+                if (get_query_arg(window.location.href, 'disable_volume') == 'on') {
+                    disable_volume = 'on';
+                    $('input[name="disable_volume"]').prop('checked', true);
+                }
+
+                var skinwave_mode = 'normal';
+                var skinwave_wave_mode = 'canvas';
+
+                lab = 'skinwave-mode'
+
+                if (val_skinwave_mode != 'default') {
+                    skinwave_mode = val_skinwave_mode;
+                }
+                if (get_query_arg(window.location.href, lab)) {
+                    val = get_query_arg(window.location.href, lab);
+
+                    //            console.info('val_skinwave_mode - ',val_skinwave_mode);
+                    if (val_skinwave_mode != 'default') {
+                        val = val_skinwave_mode;
+                    }
+
+                    //            console.info(lab, ' - ',val);
+                    skinwave_mode = val;
+
+                    $('.option-selecter-object[data-label="' + lab + '"]').each(function() {
+                        var _t = $(this);
+                        //                console.info(_t, _t.attr('data-value'));
+                        if (_t.attr('data-value') == val) {
+                            _t.parent().children().removeClass('active');
+                            _t.addClass('active');
+                        }
+                    })
+                }
+                if (skinwave_mode == 'small') {
+                    _c.removeClass('alternate-layout');
+                }
+
+                lab = 'skinwave-number';
+                if (get_query_arg(window.location.href, lab)) {
+
+                    bar_len = parseInt(get_query_arg(window.location.href, lab), 10);
+
+                    if (bar_len == 900) {
+                        bar_space = 0;
+                        bar_len = 1;
+                    }
+
+                    val = parseInt(get_query_arg(window.location.href, lab), 10);
+
+                    console.info(lab, ' - ', val, 'bar_len - ', bar_len);
+
+                    $('*[data-label="' + lab + '"]').each(function() {
+                        var _t = $(this);
+
+                        console.info(_t, val);
+                        _t.removeClass('active');
+                        if (_t.attr('data-value') == val) {
+
+                            _t.addClass('active');
+                        }
+                    })
+                }
+
+                lab = 'skinwave_wave_mode';
+                if (get_query_arg(window.location.href, lab)) {
+
+                    skinwave_wave_mode = (get_query_arg(window.location.href, lab));
+
+                    $('*[data-label="' + lab + '"]').each(function() {
+                        var _t = $(this);
+                        _t.removeClass('active');
+                        if (_t.attr('data-value') == skinwave_wave_mode) {
+
+                            _t.addClass('active');
+                        }
+                    })
+                }
+
+                if (get_query_arg(window.location.href, 'reflection_size')) {
+
+                    reflection_size = parseFloat(get_query_arg(window.location.href, 'reflection_size'));
+
+                }
+
+                $('#preview-buttons-colors-field').bind('change', function() {
+                    var _t = $(this);
+                    if (val_demo != 'demo333') {
+
+                        var aux = '.audioplayer.skin-wave .btn-embed-code, body .audioplayer.skin-wave .volume_active, body .audioplayer.skin-wave .volume_active{ background-color: ' + _t.val() + '; }';
+
+                        aux += 'body .audioplayer.skin-wave .meta-artist .the-artist{ color: ' + _t.val() + '; } ';
+
+                        if (val_demo == 'demo2') {
+
+                            aux += '.audioplayer.skin-wave .ap-controls .con-playpause .playbtn,.audioplayer.skin-wave .ap-controls .con-playpause .pausebtn{ background-color: ' + _t.val() + '; } ';
+                        }
+
+                        $("#preview-buttons-colors").html(aux);
+
+                        if (document.getElementById("ap1") && document.getElementById("ap1").api_change_design_color_highlight) {
+                            var val = String(_t.val()).replace('#', '');
+                            //                document.getElementById("ap1").api_change_design_color_highlight('ffffff,000000');
+                            document.getElementById("ap1").api_change_design_color_highlight(val);
+                        }
+                    }
+
+                })
+
+                //<iframe src="http://localhost/wordpress/wp-content/plugins/dzs-zoomsounds/bridge.php?type=gallery&id=gal1" width="100%" height="" style="overflow:hidden; transition: height 0.5s ease-out;" scrolling="no" frameborder="0"></iframe>
+
+                //        console.info(str_rate, str_views, str_rate2)
+
+                var settings_ap = {
+                    disable_volume: disable_volume,
+                    disable_scrub: disable_scrub,
+                    design_skin: 'skin-wave',
+                    skinwave_dynamicwaves: 'on',
+                    skinwave_enableSpectrum: use_spectrum,
+                    settings_backup_type: 'full',
+                    settings_useflashplayer: 'auto',
+                    skinwave_spectrummultiplier: '4',
+                    design_color_bg: design_color_bg,
+                    skinwave_comments_enable: comments_enable,
+                    skinwave_comments_playerid: '3',
+                    skinwave_mode: skinwave_mode,
+                    autoplay: 'off',
+                    embed_code: 'You can enable embed button for your viewers to embed on their site, the code will auto generate. &lt;iframe src=&quot;http://yoursite.com/bridge.php?type=gallery&amp;id=gal1&quot; &gt;&lt;/iframe&gt; <span class="copy-embed-code-btn"><i class="fa fa-clipboard"></i> Copy Embed</span> ',
+                    settings_extrahtml: str_rate + str_views + str_rate2,
+                    skinwave_wave_mode: skinwave_wave_mode,
+                    skinwave_wave_mode_canvas_waves_number: bar_len,
+                    skinwave_wave_mode_canvas_waves_padding: bar_space,
+                    skinwave_wave_mode_canvas_reflection_size: reflection_size,
+                    design_wave_color_progress: design_color_prog // == light or full
+                    ,
+                    design_animateplaypause: "on",
+                    skinwave_wave_mode_canvas_mode: skinwave_wave_mode_canvas_mode
+                };
+                // console.info(settings_ap);
+                dzsap_init('#ap1', settings_ap);
+
+                if (init_parallaxer) {
+
+                    $('.mcon-maindemo').children('.divimage').fadeIn('fast');
+
+                    if (val_demo != 'demo6') {
+
+                        $('.mcon-maindemo').children('.divimage,.grey-overlay,.semi-black-overlay').fadeIn('fast');
+                    }
+
+                    $.getScript("dzsparallaxer/dzsparallaxer.js").done(function(script, textStatus) {
+
+                        console.info('loaded script');
+                        window.dzsprx_init('.dzsparallaxer', {
+                            init_each: true
+                        })
+                    }).fail(function(jqxhr, settings, exception) {
+                        $("div.log").text("Triggered ajaxError handler.");
+                    });
+
+                    $('head').append('<link rel="stylesheet" type="text/css" href="dzsparallaxer/dzsparallaxer.css"/>');
+
+                    setTimeout(function() {
+                    }, 500);
+                }
+            });
+
+            function get_query_arg(purl, key) {
+                //        if(key!='disable_volume'){ return; };
+
+                if (purl.indexOf(key + '=') > -1) {
+                    //faconsole.log('testtt');
+                    var regexS = "[?&]" + key + "=.+";
+                    var regex = new RegExp(regexS);
+                    var regtest = regex.exec(purl);
+                    //            console.info(key, regtest);
+
+                    if (regtest != null) {
+                        var splitterS = regtest[0];
+                        if (splitterS.indexOf('&') > -1) {
+                            var aux = splitterS.split('&');
+                            //                    console.info(aux)
+                            if (aux[0].indexOf('?') > -1) {
+                                splitterS = aux[0];
+                            } else {
+                                splitterS = aux[1];
+                            }
+
+                            //                    console.info(splitterS);
+
+                        }
+                        //                console.log(splitterS);
+                        var splitter = splitterS.split('=');
+                        //                console.log(splitter[1]);
+                        //var tempNr = ;
+
+                        return splitter[1];
+
+                    }
+                    //$('.zoombox').eq
+                }
+            }
+
+            function add_query_arg(purl, key, value) {
+                key = encodeURIComponent(key);
+                value = encodeURIComponent(value);
+
+                var s = purl;
+                var pair = key + "=" + value;
+
+                var r = new RegExp("(&|\\?)" + key + "=[^\&]*");
+
+                s = s.replace(r, "$1" + pair);
+                //console.log(s, pair);
+                if (s.indexOf(key + '=') > -1) {
+                } else {
+                    if (s.indexOf('?') > -1) {
+                        s += '&' + pair;
+                    } else {
+                        s += '?' + pair;
+                    }
+                }
+                //if(!RegExp.$1) {s += (s.length>0 ? '&' : '?') + kvp;};
+
+                return s;
+            }
+        </script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+        <script type="text/javascript" src="js/main.js"></script>
+        <script src="preseter/preseter.js" type="text/javascript"></script>
+        <link rel='stylesheet' type="text/css" href="preseter/preseter.css"/>
+        <!--<script type="text/javascript"  src="dzsparallaxer/dzsparallaxer.js"></script>-->
+        <!--<link rel='stylesheet' type="text/css" href="dzsparallaxer/dzsparallaxer.css"/>-->
+        <link rel="stylesheet" href="colorpicker/farbtastic.css">
+        <script type="text/javascript" src="colorpicker/farbtastic.js"></script>
+    </body>
+</html>
